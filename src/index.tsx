@@ -10,10 +10,12 @@ createServer({
     this.get("/transactions", () => {
       return [
         {
-          id: 1
-        },
-        {
-          id: 2
+          id: 1,
+          title: "Transaction 1",
+          amount: 400,
+          type: "deposit",
+          category: "Food",
+          createAt: new Date()
         }
       ]
     })
