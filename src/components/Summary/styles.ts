@@ -25,7 +25,7 @@ export const Container = styled.main`
     }
     &.highlight-background {
       background: var(--green);
-      color: var(--text-body);
+      color: var(--shape);
     }
   }
 `;

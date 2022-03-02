@@ -8,14 +8,15 @@ export const GlobalStyle = createGlobalStyle`
     --green: #33CC95;
     --blue: #5429cc;
     --blue-light: #6933ff;
+    --text-body: #969CB2;
     --text-title: #363f5f;
-    --text-body: #f0f2f5;
     --shape:#ffffff;
 }
 
     *{
         margin:0;
         padding:0;
+        box-sizing: border-box;
     }
     html{
         @media(max-width:1080px){
