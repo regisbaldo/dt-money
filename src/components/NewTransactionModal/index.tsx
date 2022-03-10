@@ -1,5 +1,6 @@
 import Modal from 'react-modal';
 import { Container } from './styles';
+import buttonClose from '../../assets/close.svg'
 
 interface NewTransactionModalProps {
     isOpen: boolean,
@@ -14,6 +15,9 @@ export function NewTransactionModal({ isOpen, onRequestClose }: NewTransactionMo
             className="react-modal-content"
             onRequestClose={onRequestClose}>
             <Container>
+
+                <button onClick={onRequestClose} className='react-modal-close'>
+                    <img src={buttonClose} alt="Fechar modal" /></button>
                 <h2>Cadastrar nova transação</h2>
                 <input type="text" placeholder='Titulo' />
                 <input type="text" placeholder='Valor' />
