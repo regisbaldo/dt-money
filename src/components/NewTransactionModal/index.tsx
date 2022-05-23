@@ -5,6 +5,7 @@ import buttonClose from '../../assets/close.svg'
 import incomeSvg from '../../assets/income.svg';
 import outcomeSvg from '../../assets/outcome.svg';
 import { useState } from 'react';
+import { api } from "../services/api";
 
 interface NewTransactionModalProps {
     isOpen: boolean,
@@ -20,10 +21,11 @@ export function NewTransactionModal({ isOpen, onRequestClose }: NewTransactionMo
     function handleSubmit(event: FormEvent) {
         event.preventDefault();
 
-        console.log({
+        const data = {
             title, type, amount, category
-        });
+        };
 
+        api.post("/transactions", data);
     }
 
     Modal.setAppElement('#root');
